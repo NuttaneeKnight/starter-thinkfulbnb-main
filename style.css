@@ -1,18 +1,18 @@
 /* -------  General Styles ------- */
 
 body {
-  font-family: "Lato", sans-serif;
-}
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 
 h2 {
   font-size: 26px;
   font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
+  font-family: monospace;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -26,12 +26,13 @@ section {
 }
 
 section.alternate-background {
-  background-color: #00a699;
+  background-color: rgb(89, 133, 133);
   color: #fff;
 }
 
+/* responsive img */
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -39,41 +40,81 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.item {
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-item {
   flex: 1;
-  margin: 10px;
+  margin: 12px 5px;
 }
 
-.item-double {
-  flex: 2;
+.about-item {
+  flex: 1;
+  margin: 12px;
 }
+
+.ideas-item {
+  flex: 1;
+  margin: 12px;
+}
+
+.host-item {
+  flex: 1;
+  margin: 12px;
+}
+
+
 
 /* -------  Navigation ------- */
 
 header {
-  background-color: #ff385c;
+  background-color: rgb(59, 116, 128);
   padding: 20px 20px 0 20px;
   text-align: center;
 }
 
+/* class for Thinkfulbnb */
 .logo {
-  font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-family: monospace, cursive;
+  font-size: 55px;
   color: #fff;
+  text-align:center;
+}
+/* display center */
+header nav {
+  display: flex;
+  justify-content: center;
+}
+/* ul center */
+header nav ul {
+  display: flex;
+  justify-content: center;
 }
 
+/* nav list */
 header nav ul li {
+  /* no bullet */
   list-style-type: none;
 }
 
 header nav ul li a {
   color: #fff;
+  font-family: monospace;
+  font-size: 16px;
   text-decoration: none;
   padding: 0 20px 0 0;
 }
-
+/* get rid of the right last child margin */
+header nav ul li a:last-child {
+  margin-right: 0px;
+}
+/* no hover bc of a touch screen */
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
@@ -81,8 +122,9 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
-  padding: 10px;
+  border: 1px solid rgb(21, 81, 105);
+  padding: 10px 10px;
+  margin: 10px; 
 }
 
 form label {
@@ -91,23 +133,25 @@ form label {
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: 180px;
+  margin-bottom: 30px;
+  width: 200px;
 }
 
 form button {
-  background-color: #ff385c;
+  background-color: rgb(30, 113, 146);
   border: none;
   color: #fff;
-  font-size: 24px;
-  padding: 15px;
+  font-size: 26px;
+  padding: 12px;
+  margin-top: 20px 10px 10px 10px;
   width: 100%;
+  font-family: monospace;
 }
 
 /* -------  Footer ------- */
 
 footer {
-  background-color: #ff385c;
+  background-color: rgb(37, 105, 132);
 }
 
 footer p {
@@ -117,3 +161,113 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+/* desktop or ipad */
+
+@media all and (min-width: 480px) {
+
+  /* Header */
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+  
+    .logo {
+      margin: 14px 0;
+      padding-top: 0;
+    }
+  
+    header nav {
+      margin-top: 30px;
+    }
+  
+  /* Form */
+    .desktop-form-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-content: center;
+      padding: 0 8px;
+    }
+  
+    .form-group {
+      /* Group style for the label and input */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* Style for the label and input as one item */
+      flex: 1;
+      align-self: center;
+    }
+  
+    /* Style for the label and input as individual items */
+    .form-item {
+      flex: 1;
+      margin: 0;
+    }
+  
+    form button {
+      margin: 8px 0;
+    }
+  
+    .button-item {
+      flex: 1;
+    }
+  
+  /* About */
+    .desktop-about-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: space-evenly;
+    }
+    
+    .about-item {
+      flex: 1;
+      margin: 10px;
+    }
+  
+    /* Sets the paragraph as twice the size of each img item */
+    .double-item {
+      flex: 2;
+    }
+  
+  /* Ideas */
+  
+  .desktop-ideas-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .ideas-item {
+    flex: 0 50%;
+    margin: 10px;
+  }
+
+  .ideas h2 {
+    margin-bottom: 0px;
+  }
+    /* .ideas-item img {
+      width: calc(100% -(20px *2));
+      margin: 20px;
+    } */
+  
+  
+  /* Host */
+    .desktop-host-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .host-item {
+      flex: 1;
+      margin: 10px;
+    }
+  }
