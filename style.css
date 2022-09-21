@@ -122,9 +122,9 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 1px solid rgb(21, 81, 105);
-  padding: 10px 10px;
-  margin: 10px; 
+  border: 2px solid rgb(59, 116, 128);
+  margin: 0 10px;
+  padding: 10px;
 }
 
 form label {
@@ -133,19 +133,21 @@ form label {
 
 form select,
 form input {
-  margin-bottom: 30px;
-  width: 200px;
+  margin-bottom: 20px;
+  width: 180px;
+  /* align-items: baseline; */
 }
 
 form button {
-  background-color: rgb(30, 113, 146);
+  background-color: rgb(59, 116, 128);
   border: none;
   color: #fff;
   font-size: 26px;
   padding: 12px;
   margin-top: 20px 10px 10px 10px;
   width: 100%;
-  font-family: monospace;
+
+  /* font-family: monospace; */
 }
 
 /* -------  Footer ------- */
