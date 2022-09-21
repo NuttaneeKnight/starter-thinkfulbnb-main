@@ -106,10 +106,9 @@ header nav ul li {
 
 header nav ul li a {
   color: #fff;
-  font-family: monospace;
-  font-size: 16px;
+  font-size: 12px;
   text-decoration: none;
-  padding: 0 20px 0 0;
+  padding: 0 7px 0 0;
 }
 /* get rid of the right last child margin */
 header nav ul li a:last-child {
@@ -184,38 +183,38 @@ footer p {
     }
   
   /* Form */
-    .desktop-form-group {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      align-content: center;
-      padding: 0 8px;
-    }
-  
-    .form-group {
-      /* Group style for the label and input */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      /* Style for the label and input as one item */
-      flex: 1;
-      align-self: center;
-    }
-  
-    /* Style for the label and input as individual items */
-    .form-item {
-      flex: 1;
-      margin: 0;
-    }
-  
-    form button {
-      margin: 8px 0;
-    }
-  
-    .button-item {
-      flex: 1;
-    }
+  .desktop-form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0 8px;
+  }
+
+  .form-group {
+    /* Group style for the label and input */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Style for the label and input as one item */
+    flex: 1;
+    align-self: center;
+  }
+
+  /* Style for the label and input as individual items */
+  .form-item {
+    flex: 1;
+    margin: 0;
+  }
+
+  form button {
+    margin: 8px 0;
+  }
+
+  .button-item {
+    flex: 1;
+  }
   
   /* About */
     .desktop-about-group {
