@@ -81,10 +81,11 @@ header {
 
 /* class for Thinkfulbnb */
 .logo {
-  font-family: monospace, cursive;
-  font-size: 55px;
+  font-family: "Pangolin", cursive;
+  font-size: 60px;
   color: #fff;
-  text-align:center;
+  /* text-rendering: auto; */
+  text-align: center;
 }
 /* display center */
 header nav {
